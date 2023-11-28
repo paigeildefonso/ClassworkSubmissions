@@ -1,0 +1,64 @@
+/**
+ * This class defines the qualities and behaviors
+ * of a cake object. It should have a flavor.
+ */
+public class Cake 
+{
+	// a property that stores the cake's flavor
+	// default flavor is Vanilla
+		String filling = new String("Vanilla");
+		
+	
+	// a property that stores the cake's amount
+	// of layers
+	int layers;
+	
+	/**
+	 * This allows us to instantiate a cake.
+	 * 
+	 * @param flavor determines the flavor of the cake.
+	 */
+	public Cake (String str, int x) 
+	{
+		// assign a flavor to this cake as it is created
+		this.filling = str;
+		// assign amount of layers to the cake
+		this.layers = 6;
+	}
+	
+
+	/**
+	 * tell me what flavor the cake has. the object will
+	 * have different flavors depending on the user's input when 
+	 * making the cake.
+	 */
+	public void tellFlavors() 
+	{
+		// actual print statement for flavor
+		System.out.println("this cake is " + this.filling + " flavored");
+		
+	}
+
+	public void tellLayer() {
+		// actual print statement for layers
+		System.out.println("this cake has " + this.layers + " layers");
+		
+	}
+
+
+	public void setFlavor(String newFlavor) 
+	{
+		this.filling = newFlavor;
+		
+	}
+
+
+	public void incrementLayer() 
+	{
+		this.layers++;
+		
+	}
+
+	
+	
+}
