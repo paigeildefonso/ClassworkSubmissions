@@ -39,21 +39,30 @@ public class BakeryMain
 		//not the same for all pies
 		myFirstPie.tellFlavor();
 
+		//call method to tell flavor of second pie
 		mySecondPie.tellFlavor();
 		
 		//instantiate third bake good, cake
 		Cake myFirstCake = new Cake ("chocolate", 3);
 		
+		//call a method to tell flavor of first cake
 		myFirstCake.tellFlavors();
 		
+		//call a method to tell amount of layers in the cake
 		myFirstCake.tellLayer();
 		
+		//instantiate a new flavor to my cake
 		myFirstCake.setFlavor("red velvet");
 		
+		//call a method to tell me the new flavor of cake
 		myFirstCake.tellFlavors();
 		
+		//instantiate a new amount of layers
+		// method adds a layer to cake
 		myFirstCake.incrementLayer();
 		
+		//calls a method to tell me the new amount
+		//of layers
 		myFirstCake.tellLayer();
 		
 	}
