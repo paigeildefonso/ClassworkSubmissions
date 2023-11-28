@@ -36,27 +36,39 @@ public class Cake
 	{
 		// actual print statement for flavor
 		System.out.println("this cake is " + this.filling + " flavored");
-		
 	}
-
-	public void tellLayer() {
+	
+	/**
+	 * tell me how much layers the cake has. the object will have different
+	 * amount of layers depending on the user's input
+	 * when making the cake.
+	 */
+	public void tellLayer() 
+	{
 		// actual print statement for layers
 		System.out.println("this cake has " + this.layers + " layers");
-		
 	}
 
-
+	/**
+	 * tells me the new flavor of the cake. the object will
+	 * have different flavors depending on the user's input when
+	 * making the cake.
+	 * @param newFlavor
+	 */
 	public void setFlavor(String newFlavor) 
 	{
+		//applies the new flavor to the cake
 		this.filling = newFlavor;
-		
 	}
 
-
+	/**
+	 * adds a layer to the cake. it adds one to the amount of layers
+	 * that the user inputed when making the cake.
+	 */
 	public void incrementLayer() 
 	{
+		//adds one more layer to the cake
 		this.layers++;
-		
 	}
 
 	
