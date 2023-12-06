@@ -1,0 +1,70 @@
+/**
+ * This class multiplies 2 numbers together.
+ * while using a For Loop, and without an asterisk
+ * @author Paige Ildefonso
+ */
+public class MathStuff 
+{
+	
+	public static void main(String[] args) 
+	{
+		// call a method that passes parameters that 
+		// are ints
+		multTwoNums (5, 4);
+		
+		//delcare 2 numbers to test Math methods on
+		int myInt = -4;
+		double myDub = -16.0;
+		
+		//test the sqrt method. it should find the square root
+		double mySqrt = Math.sqrt(myDub);
+		System.out.println (mySqrt);
+		
+		//test the abs method with the provided double
+		// it should produce the absolute value
+		double myAbsDub = Math.abs(myDub);
+		System.out.println(myAbsDub);
+		
+		//test the abs method with the provided int
+		// it should produce the absolute value
+		double myAbsInt = Math.abs(myInt);
+		System.out.println(myAbsInt);
+		
+		//test the pow method
+		// it raises the base to the power of the exp
+		// it only returns doubles
+		int base = 2;
+		int exp = 5;
+		double prod = Math.pow(base, exp);
+		System.out.println(prod);
+		
+		//test a method that prints 
+		// a random number from 1-10 inclusive
+		double ran = Math.random();
+		System.out.println(ran);
+		
+		
+	}
+
+	/**
+	 * this method uses a For Loop to carry out
+	 * the function
+	 * @param a first int 
+	 * @param b second int
+	 */
+	private static void multTwoNums(int x, int y) 
+	{
+		int adder = x;
+		// add x to itself y times
+		for (int i = 1; i < y; i++)
+		{
+			x *= adder;
+	
+		}
+		//actual print statement to print
+		//out the multiplication output
+		System.out.println(x);
+		
+	}
+
+}
