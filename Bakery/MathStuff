@@ -1,3 +1,5 @@
+import java.util.Random;
+
 /**
  * This class multiplies 2 numbers together.
  * while using a For Loop, and without an asterisk
@@ -40,9 +42,131 @@ public class MathStuff
 		
 		//test a method that prints 
 		// a random number from 1-10 inclusive
-		double ran = Math.random();
-		System.out.println(ran);
+		Random ran = new Random();
+		int x = ran.nextInt(10) + 1;
 		
+		
+		//TASK 1: Instantiate an Integer object
+		Integer myInteger = 4;
+		
+		//print out the max and min values an Integer can store
+		System.out.println(Integer.MAX_VALUE);
+		System.out.println(Integer.MIN_VALUE);
+		
+		//TASK 2: Instantiate a Double object
+		Double myDouble = 6.6;
+				
+		//print out the max and min values a Double object can store
+		System.out.println(Double.MAX_VALUE);
+		System.out.println(Double.MIN_VALUE);
+		
+		//TASK 3: declare and int and print it as a double
+		// this is called casting
+		int a = 5;
+		System.out.println((double) a);
+		
+		//TASK 4: declare a double and print it as an int
+		// this is another example of casting
+		double b = 68.2;
+		System.out.println((int) b);
+		
+		
+		// unboxing and auto boxing
+		int q = 7;
+		int r = 2;
+		
+		int integerSum = addTwoIntegers (q,r);
+		System.out.println(integerSum);
+
+		
+		
+		
+		
+		
+		
+		
+		//TASK 2: declare 2 ints called intA and intB
+		int intA = -36;
+		int intB = 12;
+		
+		//TASK 3: declare 2 doubles called dubA and dubB
+		double dubA = -100.0;
+		double dubB = 0.64;
+		
+		//TASK 4: declare 2 integer objects
+		Integer newInteger = -36;
+		Integer anotherInteger = 12;
+		
+		//TASK 5: declare 2 double objects
+		Double newDouble = -100.0;
+		Double anotherDouble = 0.64;
+		
+		//TASK 6: use method to print out one int raised to
+		// the power of the other int
+		multTwoNums(intA, intB);
+				
+		//TASK 7: use method to print out one Int raised to 
+		// the power of the other Int
+		multTwoNums(newInteger, anotherInteger);
+		
+		//TASK 8: use method to print out one double raised
+		// to the power of the other double
+		multTwoNums((int) dubA, (int) dubB);
+		
+		//TASK 9: use method to print out one Double raised
+		// to the power of the other Double
+		multTwoNums(newDouble.intValue(), anotherDouble.intValue());
+		
+		//TASK 10: print the absolute value of intA,
+		// newInteger, dubA, and anotherDouble
+		int intA1 = Math.abs(intA);
+		System.out.println("the absolute value of intA is " + intA1);
+		
+		int newInteger1 = Math.abs(newInteger);
+		System.out.println("the absolute value of newInteger is " + newInteger1);
+		
+		double dubA1 = Math.abs(dubA);
+		System.out.println("the absolute value of dubA is " + dubA1);
+		
+		double anotherDouble2 = Math.abs(anotherDouble);
+		System.out.println("the absolute value of anotherDouble is " + anotherDouble2);
+		
+		//TASK 11: print out the square root of dubB 
+		//and anotherDouble
+		double aSqrt = Math.sqrt(dubB);
+		System.out.println ("the square root of dubB is " + aSqrt);
+		
+		double bSqrt = Math.sqrt(anotherDouble);
+		System.out.println("the square root of anotherDouble is " + bSqrt);
+		
+		// TASK 12: print out the square root of 
+		// the absolute value of intA and newInteger
+		double cSqrt = Math.sqrt(intA1);
+		System.out.println("the square root of the absolute value of intA is " + cSqrt);
+		
+		double dSqrt = Math.sqrt(newInteger1);
+		System.out.println("the square root of the absolute value of newInteger is " + dSqrt);
+		
+		//TASK 13: print out one double raised to the 
+		// power of the other double
+		double base1 = dubB;
+		double exp1 = dubA;
+		double prod1 = Math.pow(base1, exp1);
+		System.out.println("dubB raised to the power of dubA is " + prod1);
+		
+		//TASK 14: print out intA raised to the power 
+		// of dubA
+		int base2 = intA;
+		double exp2 = dubA;
+		double prod2 = Math.pow( (double) base2 , exp2);
+		System.out.println("intA raised to the power of dubA is " + prod2);
+		
+		//TASK 15: print out newDouble raised to the power of
+		// newInteger
+		double base3 = newDouble;
+		int exp3 = newInteger;
+		double prod3 = Math.pow( base3 , (double) exp3);
+		System.out.println("newDouble raised to the power of newInteger is " + prod3);
 		
 	}
 
@@ -64,6 +188,26 @@ public class MathStuff
 		//actual print statement to print
 		//out the multiplication output
 		System.out.println(x);
+		
+	}
+	
+
+	/**
+	 * this method takes in 2 Integer objects
+	 * and returns their sum as an int. even though the formal
+	 * parameters are Integer, it will turn passed ints into Integers
+	 * automatically
+	 * 
+	 * this process is called auto boxing
+	 * 
+	 * @param a	the first additive
+	 * @param b the second additive
+	 * @return the sum of a and b as an int
+	 */
+	public static int addTwoIntegers (Integer j, Integer k) 
+	{
+		
+		return j + k;
 		
 	}
 
