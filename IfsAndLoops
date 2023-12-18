@@ -1,0 +1,114 @@
+//TASK ONE
+import java.util.Scanner;
+
+public class IfsAndLoops 
+{
+	
+	public static void main(String[] args) 
+	{
+		//make pretty
+		System.out.println("give me 2 numbers");
+		
+		//call in a scanner
+		Scanner newScanner = new Scanner(System.in);
+		
+		//call x Integer
+		Integer x = newScanner.nextInt();
+		
+		//call y Integer
+		Integer y = newScanner.nextInt();
+		
+		//close scanner
+		newScanner.close();
+		
+		//TASK 2: call a method that passes x and y
+		printEvenOrOdd(x, y);
+		
+		//TASK 3: call another method that passes x and y
+		printExpTable(x, y);
+		
+		//TASK 4: call another method that returns the factorial of a number
+		getFact(x, y);
+	}
+
+/**
+ * this method passes x and y. it prints whether or not
+ * they are both odd, both even, or if they're different
+ * @param x first scanned Integer object
+ * @param y second scanned Integer object
+ */
+	private static void printEvenOrOdd(Integer x, Integer y) 
+	{
+		// TASK 2
+		if (x%2 == 0 && y%2 == 0)
+		{
+			System.out.println( x + " and " + y + " are both even" );
+		}
+		else if (x%2 == 1 && y%2 == 1) 
+		{
+			System.out.println( x + " and " + y + " are both odd");
+		}
+		else if (x%2 == 0 && y%2 == 1)
+		{
+			System.out.println ( x + " is even, and " + y + " is odd");
+		}	
+		else if (x%2 == 1 && y%2 == 0)
+		{
+			System.out.println ( x + " is odd, and " + y + " is even");
+		}	
+		
+	}
+	
+/**
+ * this method passes x and y. it prints the exponent table
+ * of x and y
+ * @param x first scanned Integer
+ * @param y second scanned Integer
+ */
+	private static void printExpTable(Integer x, Integer y) 
+	{
+		//TASK 3
+		for (int i = 0; i <= y; i++) 
+		{
+			if (x >= 0 && y >= 0)
+			{
+				double base = (double) x;
+				double expo = (double) i;
+				double prod = Math.pow(base, expo);
+				System.out.println( x + " to the power of " + i + " is " + prod);
+			}
+			else 
+			{
+				System.out.println ("Appologies, I do not know how to do that yet");
+				break;
+			}
+		}
+		
+		
+	}
+	
+/**
+ * this method returns the factorial of a number.
+ * if it's negative, instead print an error message and return negative 1
+ * @param x first scanned Integer
+ * @param y second scanned Integer
+ */
+	private static void getFact(Integer x, Integer y) 
+	{
+		//TASK 4
+		int i = 0;
+		int max = x;
+			
+		while (i <= max) 
+		{
+				int num = max * i;
+				System.out.println(num);
+				i++;
+				
+		}
+	
+	}
+	
+
+	
+}
