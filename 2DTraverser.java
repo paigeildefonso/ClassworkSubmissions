@@ -37,6 +37,14 @@ public class TwoDArrayTraversal
 			}
 		}
 		
+		for (int p = 0; p < columns; p++)
+		{
+			for (int x = 0; x < rows; x++)
+			{
+			System.out.println(name [x][p]);
+			}
+		}
+		
 		
 		
 	}
