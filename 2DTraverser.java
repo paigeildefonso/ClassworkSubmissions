@@ -45,8 +45,27 @@ public class TwoDArrayTraversal
 			}
 		}
 		
+
+		double [][] copyArr = new double [7][6];
+		allOnes2D (copyArr);
 		
 		
+	}
+	
+	public static void allOnes2D(double[][] copyArr)
+	{
+		int row = copyArr.length;
+		int column = copyArr[0].length;
+		
+		for (int y = 0; y < row; y++)
+		{
+			for (int w = 0; w < column; w++)
+			{
+				copyArr[y][w]= 1.0;
+				System.out.println(copyArr[y][w]);
+			}
+		
+		}
 	}
 	
 }
